@@ -1,0 +1,55 @@
+//colors
+@black: #000000;
+@white: #ffffff;
+@darkBlue: #071E33;
+@darkGray: #0E1A26;
+@spbSky1: #EDEDED;
+@murkyGreen: #2F9A74;
+@blue: #34AAF2;
+@soggyAsphalt: #333333;
+
+//react colors
+@reactBlack: #282C34;
+@reactAzure: #61DAFB;
+
+//BREAKPOINTS
+@mobileSmallEnd:      479px;
+@mobileMiddleStart:   480px;
+@mobileMiddleEnd:     767px;
+@mobileBigStart:      768px;
+@mobileBigEnd:        1023px;
+@desktopSmallStart:   1024px;
+@desktopSmallEnd:     1279px;
+@desktopMiddleStart:  1280px;
+@desktopMiddleEnd:    1439px;
+@desktopBigStart:     1440px;
+@desktopUltraHD:      1921px;
+
+@mobile:                ~'screen and (max-width: @{mobileBigEnd})';                                                   // ∞ - 1023
+@mobileS:               ~'screen and (max-width: @{mobileSmallEnd})';                                                 // ∞ - 479
+@mobileM:               ~'screen and (min-width: @{mobileMiddleStart}) and (max-width: @{mobileMiddleEnd})';        // 480 - 767
+@mobileB:               ~'screen and (min-width: @{mobileBigStart}) and (max-width: @{mobileBigEnd})';              // 768 - 1023
+@mobileSM:              ~'screen and (max-width: @{mobileMiddleEnd})';                                                // ∞ - 767
+@mobileMB:              ~'screen and (min-width: @{mobileMiddleStart}) and (max-width: @{mobileBigEnd})';           // 480 - 1023
+@mobileMU:              ~'screen and (min-width: @{mobileMiddleStart})';                                              // 480 - ∞
+@mobileBU:              ~'screen and (min-width: @{mobileBigStart})';                                                 // 768 - ∞
+@desktop:               ~'screen and (min-width: @{desktopSmallStart})';                                              // 1024 - ∞
+@desktopS:              ~'screen and (min-width: @{desktopSmallStart}) and (max-width: @{desktopSmallEnd})';        // 1024 - 1279
+@desktopM:              ~'screen and (min-width: @{desktopMiddleStart}) and (max-width: @{desktopMiddleEnd})';      // 1280 - 1439
+@desktopB:              ~'screen and (min-width: @{desktopBigStart})';                                                // 1440 - ∞
+@desktopSM:             ~'screen and (min-width: @{desktopSmallStart}) and (max-width: @{desktopMiddleEnd})';       // 1024 - 1439
+@desktopMU:             ~'screen and (min-width: @{desktopMiddleStart})';                                             // 1280 - ∞
+@desktopHD:             ~'screen and (min-width: @{desktopUltraHD})';                                             // 1921 - ∞
+
+@retina: ~'screen and (-webkit-min-device-pixel-ratio: 2),'
+~'screen and (min--moz-device-pixel-ratio: 2),'
+~'screen and (-o-min-device-pixel-ratio: 2/1),'
+~'screen and (min-device-pixel-ratio: 2),'
+~'screen and (min-resolution: 192dpi),'
+~'screen and (min-resolution: 2dppx)';
+@mobileRetina: @mobile ~'and (-webkit-min-device-pixel-ratio: 2),'
+@mobile ~'and (min--moz-device-pixel-ratio: 2),'
+@mobile ~'and (-o-min-device-pixel-ratio: 2/1),'
+@mobile ~'and (min-device-pixel-ratio: 2),'
+@mobile ~'and (min-resolution: 192dpi),'
+@mobile ~'and (min-resolution: 2dppx)';
