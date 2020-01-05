@@ -1,5 +1,5 @@
 /**
- * Function for creating icon on map
+ * Function for creating icon on the map
  * @createPlacemark
  * @param {number} latitude - latitude coordinate.
  * @param {number} longitude - longitude coordinate.
@@ -10,7 +10,17 @@
  * @param {number} offsetY - The author of the book.
  */
 
-export function createPlacemark(latitude, longitude, icon_src, sizeX, sizeY, offsetX, offsetY) {
+export function createPlacemark(data) {
+    const {
+        latitude,
+        longitude,
+        icon_src,
+        sizeX,
+        sizeY,
+        offsetX,
+        offsetY,
+    } = data;
+
     return new ymaps.Placemark([latitude, longitude], {}, {
         iconLayout: 'default#image',
         iconImageHref: icon_src,

@@ -3,7 +3,7 @@ import cn from 'cn-decorator';
 import './Map.less';
 import mapInit from 'utils/map-init.js';
 import {
-    mapId,
+    mapDomId,
     mapWidth,
     mapHeight,
     mapMoscowLatitude,
@@ -15,12 +15,12 @@ import {
 class Map extends React.Component {
 
     componentDidMount() {
-        mapInit(mapId, mapMoscowLatitude, mapMoscowLongitude, mapDefaultZoom);
+        mapInit(mapDomId, mapMoscowLatitude, mapMoscowLongitude, mapDefaultZoom);
     }
 
     render(cn) {
         return (
-            <div id={mapId} style={{ width: mapWidth, height: mapHeight }} className={cn('')} />
+            <div id={mapDomId} style={{ width: mapWidth, height: mapHeight }} className={cn('')} />
         );
     };
 }
